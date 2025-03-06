@@ -1,6 +1,8 @@
 # from typing import Self
 
 def validate(matrix: "Matrix") -> "Matrix":
+    if len(matrix.rows) == 1:
+        return matrix
     lengths = [len(row) for row in matrix.rows]
     iterator = iter(lengths)
     try:
@@ -80,18 +82,17 @@ class Matrix:
 
 
     def mult(self, matrix: "Matrix") -> "Matrix":
-        if dim(self)[1] != dim(matrix)[0]:
-            return Matrix()
-
-        new_rows = []
+        if dim(self)[1] == dim(matrix)[0] or dim(self)[0] == dim(matrix)[1]:
         
-        for row in self.rows:
-            new_row = []
-            for col in matrix.cols:
-                new_row.append(sum([i * j for i, j in zip(row, col)]))
-            new_rows.append(new_row)
+            new_rows = []
+            
+            for row in self.rows:
+                new_row = []
+                for col in matrix.cols:
+                    new_row.append(sum([i * j for i, j in zip(row, col)]))
+                new_rows.append(new_row)
 
-        return Matrix(new_rows)
-        
+            return Matrix(new_rows)
+        return Matrix()
         
         

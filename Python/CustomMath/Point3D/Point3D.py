@@ -4,10 +4,10 @@ from math import pi
 from CustomMath import Matrix
 
 def sin(x):
-    return _sin(x*(pi/180)) * (180/pi)
+    return _sin(x*(pi/180))
     
 def cos(x):
-    return _cos(x*(pi/180)) * (180/pi)
+    return _cos(x*(pi/180))
 
 class Point3D:
     def __init__(self, x: float, y: float, z: float) -> None:
@@ -37,9 +37,8 @@ class Point3D:
             [ 0         , cos(angle),-sin(angle)],
             [ 0         , sin(angle), cos(angle)]
         ])
-        new_point_matrix = self.to_matrix().mult(rot)
-        self = new_point_matrix
-        return new_point_matrix
+        self = self.to_matrix().mult(rot)
+        return self
 
     def rotateY(self, angle: float) -> None:
         rot = Matrix([
@@ -47,9 +46,8 @@ class Point3D:
             [ 0         , 1         , 0         ],
             [-sin(angle), 0         , cos(angle)]
         ])
-        new_point_matrix = self.to_matrix().mult(rot)
-        self = new_point_matrix
-        return new_point_matrix
+        self = self.to_matrix().mult(rot)
+        return self
 
     def rotateZ(self, angle: float) -> None:
         rot = Matrix([
@@ -57,7 +55,6 @@ class Point3D:
             [ sin(angle), cos(angle), 0         ],
             [ 0         , 0         , 1         ]
         ])
-        new_point_matrix = self.to_matrix().mult(rot)
-        self = new_point_matrix
-        return new_point_matrix
-        
+        self = self.to_matrix().mult(rot)
+        return self
+            
