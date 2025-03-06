@@ -1,5 +1,13 @@
-from math import cos, sin
+from math import cos as _cos
+from math import sin as _sin
+from math import pi
 from CustomMath import Matrix
+
+def sin(x):
+    return _sin(x*(pi/180)) * (180/pi)
+    
+def cos(x):
+    return _cos(x*(pi/180)) * (180/pi)
 
 class Point3D:
     def __init__(self, x: float, y: float, z: float) -> None:
@@ -14,9 +22,7 @@ class Point3D:
 
     def to_matrix(self) -> Matrix:
         return Matrix([
-            [self.x],
-            [self.y],
-            [self.z]
+            [self.x,self.y,self.z]
         ])
 
     def from_matrix(matrix: Matrix) -> "Point3D":
