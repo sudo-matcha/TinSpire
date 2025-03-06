@@ -32,6 +32,7 @@ class Point3D:
             [ 0         , sin(angle), cos(angle)]
         ])
         new_point_matrix = self.to_matrix().mult(rot)
+        self = new_point_matrix
         return new_point_matrix
 
     def rotateY(self, angle: float) -> None:
@@ -41,6 +42,7 @@ class Point3D:
             [-sin(angle), 0         , cos(angle)]
         ])
         new_point_matrix = self.to_matrix().mult(rot)
+        self = new_point_matrix
         return new_point_matrix
 
     def rotateZ(self, angle: float) -> None:
