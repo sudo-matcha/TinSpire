@@ -29,7 +29,8 @@ class Matrix:
     def __init__(self, rows: list[list[float]]=[]) -> None:
         self.rows = rows
         self = validate(self)
-        self.cols = [[row[i] for row in self.rows] for i in range(dim(self)[0])]
+        # print(self)
+        self.cols = [[row[i] for row in self.rows] for i in range(len(self.rows[0]))]
 
     def __repr__(self) -> str:
         s = "Matrix [" 
@@ -82,6 +83,7 @@ class Matrix:
 
 
     def mult(self, matrix: "Matrix") -> "Matrix":
+        # print(self, matrix)
         if dim(self)[1] == dim(matrix)[0] or dim(self)[0] == dim(matrix)[1]:
         
             new_rows = []
