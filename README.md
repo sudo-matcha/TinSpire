@@ -15,7 +15,7 @@ A collection of libraries for 3D rendering.
 **Current Submodules**
 - Camera - Camera class used in `threedee.Point3D` for projection
 - Point3D - A class for creating, representing, and manipulating 3D points
-<h2><img style="width: 30px; margin-right: 1em" src="./readme_assets/ti.png">TI-BASIC</h2>
+<h2><img style="width: 30px; margin-right: 2em" src="./readme_assets/ti.png">TI-BASIC</h2>
 
 No TI-Basic programs are currently being developed for TinSpire, but keep an eye out!
 ## Installation
