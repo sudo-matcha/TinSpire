@@ -1,5 +1,3 @@
-# from typing import Self
-
 def validate(matrix: "Matrix") -> "Matrix":
     if len(matrix.rows) == 1:
         return matrix
@@ -36,9 +34,9 @@ class Matrix:
         s = "Matrix [" 
         for n, row in enumerate(self.rows):
             if n > 0:
-                s += f"{' '*8}"
+                s += (' '*8)
             for i in row:
-                s += f"{' ' if str(i)[0]=='-' else '  '}{round(i, 3)}"
+                s +=(' ' if str(i)[0]=='-' else '  ')+str(round(i, 3))
             if n < len(self.rows) - 1:
                 s += "\n"
         s += " ]\n"

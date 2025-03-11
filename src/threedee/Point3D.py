@@ -18,24 +18,23 @@ class Point3D:
 
 
     def __repr__(self) -> str:
-        return f"Point3D({round(self.x, 4)}, {round(self.y, 4)}, {round(self.z, 4)})"
+        return "Point3D("+str(round(self.x, 4))+", "+str(round(self.y, 4))+", "+str(round(self.z, 4))+")"
     
 
-    def to_matrix(self, direction: str="vert") -> Matrix:
-        match direction:
-            case "horiz":
-                return Matrix([
-                    [self.x,self.y,self.z]
-                ])
-            case "vert":
-                return Matrix([
-                    [self.x],
-                    [self.y],
-                    [self.z]
-                ])
+    def to_matrix(self, direction: str="vert") -> CustomMath:
+        if direction == "horiz":
+            return CustomMath([
+                [self.x,self.y,self.z]
+            ])
+        if direction == "vert":
+            return CustomMath([
+                [self.x],
+                [self.y],
+                [self.z]
+            ])
                 
     @staticmethod
-    def from_matrix(matrix: Matrix) -> "Point3D":
+    def from_matrix(matrix: CustomMath) -> "Point3D":
         if len(matrix.cols) == 3 and len(matrix.rows) == 1:
             x, y, z = matrix.cols[0]
             return Point3D(x, y, z)
@@ -47,7 +46,7 @@ class Point3D:
     
 
     def rotateX(self, angle: float) -> "Point3D":
-        rot = Matrix([
+        rot = CustomMath([
             [ 1         , 0         , 0         ],
             [ 0         , cos(angle),-sin(angle)],
             [ 0         , sin(angle), cos(angle)]
@@ -56,7 +55,7 @@ class Point3D:
         return Point3D.from_matrix(rot.mult(self.to_matrix()))
 
     def rotateY(self, angle: float) -> "Point3D":
-        rot = Matrix([
+        rot = CustomMath([
             [ cos(angle), 0         , sin(angle)],
             [ 0         , 1         , 0         ],
             [-sin(angle), 0         , cos(angle)]
@@ -65,7 +64,7 @@ class Point3D:
         return Point3D.from_matrix(rot.mult(self.to_matrix()))
 
     def rotateZ(self, angle: float) -> "Point3D":
-        rot = Matrix([
+        rot = CustomMath([
             [ cos(angle),-sin(angle), 0         ],
             [ sin(angle), cos(angle), 0         ],
             [ 0         , 0         , 1         ]
@@ -83,11 +82,11 @@ class Point3D:
         # y = scale_z * self.z + camera.z
         point_matrix = self.to_matrix()
 
-        scale_matrix = Matrix([
+        scale_matrix = CustomMath([
             [sx, 0 , 0 ],
             [0 , 0 , sz]
         ])
-        camera_matrix = Matrix([
+        camera_matrix = CustomMath([
             [camera.x],
             [camera.z]
         ])
@@ -110,7 +109,7 @@ class Point3D:
         # by = (ez / d.z) * d.y + ey
         # return (bx, by)def project_perspective(self, camera: Camera) -> tuple[float,float]:
         # Step 1: Translate the point relative to the camera position
-        camera_matrix = Matrix([
+        camera_matrix = CustomMath([
             [camera.x],
             [camera.y],
             [camera.z]

@@ -8,5 +8,5 @@ class Camera:
         self.az = az
 
     def __repr__(self) -> str:
-        return f"Camera({round(self.x,4)}, {round(self.y,4)}, {round(self.z,4)})@angles({round(self.ax, 4)}, {round(self.ay, 4)}, {round(self.az, 4)})"
+        return "Camera("+str(round(self.x,4))+", "+str(round(self.y,4))+", "+str(round(self.z,4))+")@("+str(round(self.ax, 4))+"°, "+str(round(self.ay, 4))+"°, "+str(round(self.az, 4))+"°)"
         
