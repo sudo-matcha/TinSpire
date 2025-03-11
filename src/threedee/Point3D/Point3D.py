@@ -18,7 +18,7 @@ class Point3D:
 
 
     def __repr__(self) -> str:
-        return f"Point3D({round(self.x, 4)}, {round(self.y, 4)}, {round(self.z, 4)})"
+        return "Point3D("+str(round(self.x, 4))+", "+str(round(self.y, 4))+", "+str(round(self.z, 4))+")"
     
 
     def to_matrix(self, direction: str="vert") -> Matrix:
