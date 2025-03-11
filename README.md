@@ -1,4 +1,4 @@
-<h1><img style="width: 30px; margin-right: 1em" src="/readme_assets/logo.png"></img> TinSpire</h1>
+<h1 align="center"><img style="width: 30px; margin-right: 1em" src="/readme_assets/logo.png"></img> TinSpire</h1>
 
 A collection of custom Python/TI-Basic libraries for the TI-Nspire CX II Family made for recreational computing and mathematics
 ## 🗒️ Note
