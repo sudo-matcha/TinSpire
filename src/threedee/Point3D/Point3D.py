@@ -22,17 +22,16 @@ class Point3D:
     
 
     def to_matrix(self, direction: str="vert") -> Matrix:
-        match direction:
-            case "horiz":
-                return Matrix([
-                    [self.x,self.y,self.z]
-                ])
-            case "vert":
-                return Matrix([
-                    [self.x],
-                    [self.y],
-                    [self.z]
-                ])
+        if direction == "horiz":
+            return Matrix([
+                [self.x,self.y,self.z]
+            ])
+        if direction == "vert":
+            return Matrix([
+                [self.x],
+                [self.y],
+                [self.z]
+            ])
                 
     @staticmethod
     def from_matrix(matrix: Matrix) -> "Point3D":
