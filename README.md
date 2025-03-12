@@ -36,4 +36,4 @@ No TI-Basic programs are currently being developed for TinSpire, but keep an eye
 3) To confiirm the modules have been installed succesfully, TinSpire's modules should show up in the `More Modules` sub-menu when editing a Python file.
 ## Transfering Files
 To transfer the `.tns` document files to your calculator, use one of the following software:
-- [Ti-Nspire&#x2122 CX II Connect](https://nspireconnect.ti.com/)
+- [Ti-Nspire&#x2122; CX II Connect](https://nspireconnect.ti.com/)
