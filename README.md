@@ -36,8 +36,9 @@ No TI-Basic programs are currently being developed for TinSpire, but keep an eye
 3) To confiirm the modules have been installed succesfully, TinSpire's modules should show up in the `More Modules` sub-menu when editing a Python file.
 ## Transfering Files
 Use the table below to choose the best software for your use case:
-| Model(s)          | Paid  | Offline |
-| ----------------- | ----- | ------- |
-| CX II / CX II CAS |  no   |   no    |
-- [Ti-Nspire&#x2122; CX II Connect](https://nspireconnect.ti.com/)
-- [Ti-Nspire&#x2122; CX CAS Student Software]
+| Software                                                                                                                        | Model(s)          | Requires Activation | Offline | Open-Source |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------- | ------- | ----------- |
+| [N-Link](https://lights0123.com/n-link/) (Recommended)                                                                          | CX II / CX II CAS | no                  | yes     | yes         |
+| [Ti-Nspire&#x2122; CX II Connect](https://nspireconnect.ti.com/)                                                                | CX II / CX II CAS | no                  | no      | no          |
+| [Ti-Nspire&#x2122; CX CAS Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-cas-student-sw) | CX II CAS         | yes                 | yes     | no          |
+| [Ti-Nspire&#x2122; CX Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-student-sw)         | CX II             | yes                 | yes     | no          |
