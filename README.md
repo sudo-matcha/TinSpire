@@ -46,7 +46,8 @@ Use the table below to choose the best software for your use case:
 | [Ti-Nspire&#x2122; CX CAS Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-cas-student-sw) | CX II CAS         | yes                 | yes     | no          |
 | [Ti-Nspire&#x2122; CX Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-student-sw)         | CX II             | yes                 | yes     | no          |
 
-Once you've found a software that works 
+Once you've found a software that works
+
 2) To install each module, navigate to each document and:
     1) Navigate to the python file with the same name as the module
     
@@ -54,10 +55,10 @@ Once you've found a software that works
     
     2) Press the "menu" key and go to `Actions` > `Install as Python module` and hit "enter".
     
-    <div align="center"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image003.jpg"></p>
+    <p align="center"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image003.jpg"></p>
     
     3) Confirm replacing the document; this is OK
     
-    <div align="center"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image004.jpg"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image005.jpg"></div>
+    <p align="center"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image004.jpg"><img style="width: 90%; margin: 10px" src="./readme_assets/screenshots/03-12-2025 Image005.jpg"></p>
 
 3) To confiirm the modules have been installed succesfully, TinSpire's modules should show up in the `More Modules` sub-menu when editing a Python file.
