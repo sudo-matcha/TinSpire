@@ -1,21 +1,39 @@
-<h1 align="center"><img style="width: 30px; margin-right: 1em" src="/readme_assets/logo.png"></img> TinSpire</h1>
+# TinSpire
 
-A collection of custom Python/TI-Basic libraries for the TI-Nspire CX II Family made for recreational computing and mathematics
+
+<p align="center">
+<img style="width: 50px; margin-right: 1em" src="./readme_assets/logo.png">
+</p>
+
+<p align="center">
+    <img src="https://shields.io/badge/Python-3.4-blue?logo=python&style=flat&logoColor=yellow">
+    <img src="https://shields.io/badge/version-a0.0.1-lightgrey">
+</p>
+
+A collection of custom Python/TI-Basic libraries for the TI-Nspire CX II Family made for recreational computing and mathematics.
+## Table of Contents
+- [Python Libraries](#python-libraries)
+	+ [CustomMath](#custommath)
+		* Matrix
+	+ `threedee`
+		* Camera
+		* Point3D
+- [TI-BASIC Programs](#ti-basic-programs)
 ## 🗒️ Note
-These libraries have only been tested on a factory TI-Nspire CX II CAS with the latest firmware.
+>These libraries have only been tested on a factory TI-Nspire CX II CAS with the latest firmware.
 All other firmware and hardware has not been proven to work, but most likely will.
-<h2><img style="width: 30px; margin-right: 1em" src="./readme_assets/python.png"> Python Libraries</h2>
+<h2 id="python-libraries"><img style="width: 30px; margin-right: 1em" src="./readme_assets/python.png"> Python Libraries</h2>
 
 ### CustomMath
-An extended math library designed to replace certain functions and data structures from `numpy` and other commonly used math libraries.
+An extended math library designed to replace certain functions and data structures from `numpy` and other commonly used math libraries.<br>
 **Current Submodules**
 - Matrix - Barebones matrix math implementation
 ### threedee
-A collection of libraries for 3D rendering.
+A collection of tools used for 3D rendering and calculations.<br>
 **Current Submodules**
 - Camera - Camera class used in `threedee.Point3D` for projection
 - Point3D - A class for creating, representing, and manipulating 3D points
-<h2><img style="width: 30px; margin-right: 1em" src="./readme_assets/ti.png"> TI-BASIC</h2>
+<h2 id="ti-basic-programs"><img style="width: 30px; margin-right: 1em" src="./readme_assets/ti.png"> TI-BASIC Programs</h2>
 
 No TI-Basic programs are currently being developed for TinSpire, but keep an eye out!
 ## Installation
