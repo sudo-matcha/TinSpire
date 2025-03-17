@@ -1,4 +1,15 @@
-<h1 align="center"><img style="width: 30px; margin-right: 1em" src="/readme_assets/logo.png"></img> TinSpire</h1>
+# TinSpire
+
+<div>
+    <p align="center">
+    <img style="width: 50px; margin-right: 1em" src="./readme_assets/logo.png">
+    </p>
+
+    <p align="center">
+        <img src="https://shields.io/badge/Python-3.4-blue?logo=python&style=flat&logoColor=yellow">
+        <img src="https://shields.io/badge/version-a0.0.1-lightgrey">
+    </p>
+</div>
 
 A collection of custom Python/TI-Basic libraries for the TI-Nspire CX II Family made for recreational computing and mathematics
 ## 🗒️ Note
