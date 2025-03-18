@@ -96,7 +96,7 @@ class Point3D:
         return tuple(point_matrix.cols[0])
 
 
-    def project_perspective(self, camera: Camera) -> tuple[float,float]:
+    def old_project_perspective(self, camera: Camera) -> tuple[float,float]:
         # camera_matrix = Matrix([
             # [camera.x],
             # [camera.y],
@@ -137,3 +137,38 @@ class Point3D:
         screen_center_y = 0  # Adjust as needed
         
         return (projected_x + screen_center_x, projected_y + screen_center_y)
+    
+    def project_perspective(self, camera, screen_width, screen_height) -> tuple[float,float]:
+        camera_matrix = Matrix([
+            [camera.x],
+            [camera.y],
+            [camera.z]
+        ])
+        translated_point = self.to_matrix(direction="vert").sub(camera_matrix)
+        translated = Point3D.from_matrix(translated_point)
+        translated = translated.rotateX(camera.ax).rotateY(camera.ay).rotateZ(camera.az)
+        
+        if translated.z <= 10:
+            return None  # Point is behind or too close to camera - don't render
+        
+        # Use a larger focal length for better scaling
+        focal_length = camera.focal_length
+        
+        # Calculate projected coordinates with scaling factor
+        scale = focal_length / translated.z
+        projected_x = translated.x * scale
+        projected_y = translated.y * scale
+        
+        # Center on screen
+        screen_x = projected_x + screen_width / 2
+        screen_y = projected_y + screen_height / 2
+        
+        # Clipping - don't return points too far outside the screen
+        # This prevents extreme values from causing issues
+        margin = 500  # Allow some points outside the visible area for partial objects
+        if (screen_x < -margin or screen_x > screen_width + margin or 
+            screen_y < -margin or screen_y > screen_height + margin):
+            return None
+            
+        return (screen_x, screen_y)
+
