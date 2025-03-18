@@ -94,5 +94,3 @@ class Matrix:
 
             return Matrix(new_rows)
         return Matrix()
-        
-        
