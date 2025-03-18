@@ -39,12 +39,13 @@ No TI-Basic programs are currently being developed for TinSpire, but keep an eye
 ## Installation
 ### Transfering Files
 Use the table below to choose the best software for your use case:
-| Software | Model(s) | Requires Activation | Offline | Open-Source |
-| -------- | -------- | ------------------- | ------- | ----------- |
-| [N-Link](https://lights0123.com/n-link/) (Recommended)                                                                          | CX II / CX II CAS | no                  | yes     | yes         |
-| [Ti-Nspire&#x2122; CX II Connect](https://nspireconnect.ti.com/)                                                                | CX II / CX II CAS | no                  | no      | no          |
-| [Ti-Nspire&#x2122; CX CAS Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-cas-student-sw) | CX II CAS         | yes                 | yes     | no          |
-| [Ti-Nspire&#x2122; CX Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-student-sw)         | CX II             | yes                 | yes     | no          |
+| Software | Model(s) | Requires Activation | Offline | Open-Source | Supports Firefox |
+| -------- | -------- | ------------------- | ------- | ----------- | ---------------- |
+| [N-Link (Online)](https://n-link.lights0123.com/) (Recommended Online) | CX II / CX II CAS | no | no | yes | no |
+| [N-Link](https://lights0123.com/n-link/) (Recommended Offline) | CX II / CX II CAS | no | yes | yes | N/A |
+| [Ti-Nspire&#x2122; CX II Connect](https://nspireconnect.ti.com/) | CX II / CX II CAS | no | no | no | no |
+| [Ti-Nspire&#x2122; CX CAS Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-cas-student-sw) | CX II CAS | yes | yes | no | N/A |
+| [Ti-Nspire&#x2122; CX Student Software](https://education.ti.com/en/products/computer-software/ti-nspire-cx-student-sw) | CX II | yes | yes | no | N/A |
 
 Once you've found a software that works, download the latest release of `PyLib.zip`.<br>
 Once downloaded, extract the `PyLib` directory and copy it to the root of your calculator, merging it with the existing `PyLib` directory.<br>
