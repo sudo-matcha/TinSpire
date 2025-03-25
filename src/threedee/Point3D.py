@@ -171,4 +171,3 @@ class Point3D:
             return None
             
         return (screen_x, screen_y)
-
