@@ -1,5 +1,5 @@
 def validate(matrix: "Matrix") -> "Matrix":
-    if len(matrix.rows) == 1:
+    if len(matrix.rows) == 1 or not matrix.rows:
         return matrix
     lengths = [len(row) for row in matrix.rows]
     iterator = iter(lengths)
@@ -94,5 +94,3 @@ class Matrix:
 
             return Matrix(new_rows)
         return Matrix()
-        
-        
